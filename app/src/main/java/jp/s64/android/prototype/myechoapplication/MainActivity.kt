@@ -1,12 +1,16 @@
 package jp.s64.android.prototype.myechoapplication
 
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), BlankFragment.OnFragmentInteractionListener, BlankFragment2.OnFragmentInteractionListener {
+    override fun onFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     lateinit var navHost: NavHostFragment
 

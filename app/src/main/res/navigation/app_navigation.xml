@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_launcher_title_to_flow_input"
             app:destination="@id/flow_input" />
+        <action
+            android:id="@+id/action_launcher_title_to_blankFragment"
+            app:destination="@id/blankFragment" />
     </fragment>
 
     <fragment
@@ -44,5 +47,19 @@
         <deepLink app:uri="http://example.com/about"/>
 
     </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="jp.s64.android.prototype.myechoapplication.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_blankFragment2"
+            app:destination="@id/blankFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment2"
+        android:name="jp.s64.android.prototype.myechoapplication.BlankFragment2"
+        android:label="fragment_blank_fragment2"
+        tools:layout="@layout/fragment_blank_fragment2" />
 
 </navigation>

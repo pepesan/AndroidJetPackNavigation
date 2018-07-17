@@ -17,6 +17,7 @@ class TitleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.button).setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_launcher_title_to_flow_input))
+        view.findViewById<Button>(R.id.button3).setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_launcher_title_to_blankFragment))
     }
 
 }
