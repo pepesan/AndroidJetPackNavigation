@@ -7,8 +7,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_blank_fragment2.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,13 +17,13 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [BlankFragment2.OnFragmentInteractionListener] interface
+ * [BlankFragment3.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [BlankFragment2.newInstance] factory method to
+ * Use the [BlankFragment3.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class BlankFragment2 : Fragment() {
+class BlankFragment3 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -42,20 +40,9 @@ class BlankFragment2 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank_fragment2, container, false)
+        return inflater.inflate(R.layout.fragment_blank_fragment3, container, false)
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        salta3.setOnClickListener({
-            Navigation.findNavController(it).navigate(
-                    R.id.action_blankFragment2_to_blankFragment3,
-                    ResultFragmentArgs.Builder()
-                            //.setInput_text(editText.text.toString())
-                            .build()
-                            .toBundle()
-            )
-        })
-    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
@@ -99,12 +86,12 @@ class BlankFragment2 : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment BlankFragment2.
+         * @return A new instance of fragment BlankFragment3.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-                BlankFragment2().apply {
+                BlankFragment3().apply {
                     arguments = Bundle().apply {
                         putString(ARG_PARAM1, param1)
                         putString(ARG_PARAM2, param2)
