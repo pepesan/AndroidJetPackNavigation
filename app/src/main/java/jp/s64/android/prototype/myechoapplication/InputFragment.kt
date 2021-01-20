@@ -24,7 +24,7 @@ class InputFragment : Fragment() {
             Navigation.findNavController(it).navigate(
                     R.id.action_flow_input_to_flow_result,
                     ResultFragmentArgs.Builder()
-                            .setInput_text(editText.text.toString())
+                            .setInputText(editText.text.toString())
                             .build()
                             .toBundle()
             )

@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.title_fragment.*
 
 class TitleFragment : Fragment() {
 

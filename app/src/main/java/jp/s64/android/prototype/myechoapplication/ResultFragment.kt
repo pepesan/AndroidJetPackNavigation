@@ -16,9 +16,9 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val args = ResultFragmentArgs.fromBundle(arguments)
+        val args = ResultFragmentArgs.fromBundle(arguments as Bundle)
 
-        view.findViewById<TextView>(R.id.textView).text = args.input_text
+        view.findViewById<TextView>(R.id.textView).text = args.inputText
     }
 
 }
