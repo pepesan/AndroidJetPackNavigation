@@ -10,5 +10,8 @@
         android:id="@id/screen_about"
         android:icon="@drawable/ic_info"
         android:title="@string/about"/>
-
+    <item
+        android:id="@id/screen_settings"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/settings" />
 </menu>

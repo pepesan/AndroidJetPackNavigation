@@ -48,6 +48,15 @@
 
     </fragment>
     <fragment
+        android:id="@+id/screen_settings"
+        android:name="jp.s64.android.prototype.myechoapplication.SettingsFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_settings">
+
+        <deepLink app:uri="http://example.com/settings"/>
+
+    </fragment>
+    <fragment
         android:id="@+id/blankFragment"
         android:name="jp.s64.android.prototype.myechoapplication.BlankFragment"
         android:label="fragment_blank"
