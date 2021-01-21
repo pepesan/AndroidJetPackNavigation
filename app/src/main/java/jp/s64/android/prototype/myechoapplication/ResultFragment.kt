@@ -1,5 +1,6 @@
 package jp.s64.android.prototype.myechoapplication
 
+import android.app.Application
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -15,10 +16,13 @@ class ResultFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        view.findViewById<TextView>(R.id.textView).text = (activity?.application as Aplicacion).dato
+        /*
         val args = ResultFragmentArgs.fromBundle(arguments as Bundle)
 
         view.findViewById<TextView>(R.id.textView).text = args.inputText
+
+         */
     }
 
 }

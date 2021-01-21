@@ -20,6 +20,7 @@ class InputFragment : Fragment() {
 
         val editText = view.findViewById<EditText>(R.id.editText)
 
+        /*
         view.findViewById<Button>(R.id.button2).setOnClickListener {
             Navigation.findNavController(it).navigate(
                     R.id.action_flow_input_to_flow_result,
@@ -28,6 +29,12 @@ class InputFragment : Fragment() {
                             .build()
                             .toBundle()
             )
+        }
+         */
+        view.findViewById<Button>(R.id.button2).setOnClickListener {
+            (activity as MainActivity).dato = editText.text.toString()
+            Navigation.findNavController(it).navigate(
+                    R.id.action_flow_input_to_flow_result)
         }
     }
 

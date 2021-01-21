@@ -4,6 +4,7 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.util.Log
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity(), BlankFragment.OnFragmentInteractionLis
     }
 
     lateinit var navHost: NavHostFragment
+    var dato: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +27,9 @@ class MainActivity : AppCompatActivity(), BlankFragment.OnFragmentInteractionLis
 
         NavigationUI.setupActionBarWithNavController(this, navHost.navController)
         NavigationUI.setupWithNavController(bottomNavigation, navHost.navController)
+        this.dato = (application as Aplicacion).dato
+        this.dato="Dato en MainActivity"
+        Log.d("app:MainActivity", this.dato.toString())
     }
 
     /*
