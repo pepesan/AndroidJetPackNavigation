@@ -28,6 +28,7 @@ dependencies {
     implementation "android.arch.navigation:navigation-ui:${navigation_architecture_component_version}"
 
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'com.android.support:support-v4:28.0.0'
 
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

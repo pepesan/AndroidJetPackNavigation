@@ -10,5 +10,7 @@
     <string name="hello_blank_fragment">こんにちは空白のフラグメント</string>
     <string name="settings">" 設定"</string>
     <string name="input_text">入力テキスト！</string>
+    <string name="menu_apps_title">Apps</string>
+    <string name="app_text">Apps</string>
 
 </resources>

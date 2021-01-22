@@ -79,5 +79,10 @@
         android:name="jp.s64.android.prototype.myechoapplication.BlankFragment3"
         android:label="fragment_blank_fragment3"
         tools:layout="@layout/fragment_blank_fragment3" />
+    <fragment
+        android:id="@+id/appFragment"
+        android:name="jp.s64.android.prototype.myechoapplication.AppFragment"
+        android:label="@string/app_text"
+        tools:layout="@layout/fragment_app" />
 
 </navigation>

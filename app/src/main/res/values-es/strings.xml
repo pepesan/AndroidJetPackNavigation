@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi App molona</string>
+    <string name="title">Título</string>
+    <string name="input">Entrada</string>
+    <string name="result">resultado</string>
+    <string name="about">Acerca de</string>
+    <string name="hello_blank_fragment">Hola Fragmento en blanco</string>
+    <string name="settings">Configuraciones</string>
+    <string name="input_text">Introduzca dato!</string>
+</resources>
