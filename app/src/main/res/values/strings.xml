@@ -12,5 +12,7 @@
     <string name="input_text">入力テキスト！</string>
     <string name="menu_apps_title">Apps</string>
     <string name="app_text">Apps</string>
+    <string name="list_main_text">Listado</string>
+    <string name="detail_text">Detalle</string>
 
 </resources>

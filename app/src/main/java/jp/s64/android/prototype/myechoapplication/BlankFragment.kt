@@ -3,7 +3,7 @@ package jp.s64.android.prototype.myechoapplication
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,15 +53,10 @@ class BlankFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val editText = view.findViewById<EditText>(R.id.editText)
 
         view.findViewById<Button>(R.id.button4).setOnClickListener {
             Navigation.findNavController(it).navigate(
-                    R.id.action_blankFragment_to_blankFragment2,
-                    ResultFragmentArgs.Builder()
-                            //.setInput_text(editText.text.toString())
-                            .build()
-                            .toBundle()
+                    R.id.action_blankFragment_to_blankFragment2
             )
         }
     }

@@ -3,10 +3,13 @@ package jp.s64.android.prototype.myechoapplication
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -43,6 +46,14 @@ class BlankFragment3 : Fragment() {
         return inflater.inflate(R.layout.fragment_blank_fragment3, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<Button>(R.id.button5).setOnClickListener{
+            Log.d("app:BlankFragment3", "Button5 clicked")
+            Navigation.findNavController(it).navigate(
+                    R.id.action_blankFragment3_to_blankFragment2)
+        }
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
@@ -57,6 +68,7 @@ class BlankFragment3 : Fragment() {
             throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
         }
     }
+
 
     override fun onDetach() {
         super.onDetach()

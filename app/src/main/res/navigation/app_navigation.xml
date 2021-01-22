@@ -59,7 +59,7 @@
     <fragment
         android:id="@+id/blankFragment"
         android:name="jp.s64.android.prototype.myechoapplication.BlankFragment"
-        android:label="fragment_blank"
+        android:label="@string/list_main_text"
         tools:layout="@layout/fragment_blank" >
         <action
             android:id="@+id/action_blankFragment_to_blankFragment2"
@@ -68,7 +68,7 @@
     <fragment
         android:id="@+id/blankFragment2"
         android:name="jp.s64.android.prototype.myechoapplication.BlankFragment2"
-        android:label="fragment_blank_fragment2"
+        android:label="@string/detail_text"
         tools:layout="@layout/fragment_blank_fragment2" >
         <action
             android:id="@+id/action_blankFragment2_to_blankFragment3"
@@ -78,7 +78,11 @@
         android:id="@+id/blankFragment3"
         android:name="jp.s64.android.prototype.myechoapplication.BlankFragment3"
         android:label="fragment_blank_fragment3"
-        tools:layout="@layout/fragment_blank_fragment3" />
+        tools:layout="@layout/fragment_blank_fragment3" >
+        <action
+            android:id="@+id/action_blankFragment3_to_blankFragment2"
+            app:destination="@id/blankFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/appFragment"
         android:name="jp.s64.android.prototype.myechoapplication.AppFragment"
