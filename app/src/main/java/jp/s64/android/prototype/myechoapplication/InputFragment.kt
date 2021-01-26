@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 
 class InputFragment : Fragment() {
@@ -38,12 +39,9 @@ class InputFragment : Fragment() {
             Log.d("app:InputFragment", "dato:"+dato)
             (activity as MainActivity).dato = editText.text.toString()
             Log.d("app:InputFragment", "dato del formu:"+(activity as MainActivity).dato)
-            Navigation.findNavController(it).navigate(
-                    R.id.action_flow_input_to_flow_result,
-                    ResultFragmentArgs.Builder()
-                            .setInputText(editText.text.toString())
-                            .build()
-                            .toBundle())
+            val bundle = bundleOf("texto" to editText.text.toString(), "valor2" to 23)
+            Navigation.findNavController(it).navigate(R.id.action_flow_input_to_flow_result, bundle)
+
         }
     }
 

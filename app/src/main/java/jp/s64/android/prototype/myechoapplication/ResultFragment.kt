@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.fragment.navArgs
 
 class ResultFragment : Fragment() {
     var dato: String? = null
@@ -28,14 +29,11 @@ class ResultFragment : Fragment() {
         Log.d("app: ResultFragment", "on attach")
         this.dato= (activity as MainActivity).dato
         Log.d("app: ResultFragment", "instancia de app: "+ (activity as MainActivity).dato)
-        textView?.text =  this.dato
-        /*
-        val args = ResultFragmentArgs.fromBundle(arguments as Bundle)
-
-        this.textView?.text = args.inputText
+        textView?.text= arguments?.getString("texto")
+        Log.d("app: ResultFragment", "valor 2: "+ arguments?.getInt("valor2"))
 
 
-         */
+         
 
     }
 

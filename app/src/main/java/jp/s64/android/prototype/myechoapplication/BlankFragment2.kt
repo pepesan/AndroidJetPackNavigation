@@ -47,15 +47,11 @@ class BlankFragment2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val salta3 = getView()?.findViewById<View>(R.id.salta3) as TextView
-        salta3.setOnClickListener({
+        salta3.setOnClickListener {
             Navigation.findNavController(it).navigate(
-                    R.id.action_blankFragment2_to_blankFragment3,
-                    ResultFragmentArgs.Builder()
-                            //.setInput_text(editText.text.toString())
-                            .build()
-                            .toBundle()
+                    R.id.action_blankFragment2_to_blankFragment3
             )
-        })
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
