@@ -57,12 +57,16 @@ class MainActivity : AppCompatActivity(), BlankFragment.OnFragmentInteractionLis
         when (item.itemId) {
 
             R.id.screen_about -> {
-                navHost.navController.navigate(R.id.action_launcher_title_to_screen_about)
+                navegaAAbout()
                 return true
             }
 
             else -> return super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun navegaAAbout() {
+        navHost.navController.navigate(R.id.action_launcher_title_to_screen_about)
     }
 
 }

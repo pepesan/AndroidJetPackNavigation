@@ -28,6 +28,10 @@ class TitleFragment : Fragment() {
                 Navigation.createNavigateOnClickListener(R.id.action_launcher_title_to_flow_input))
         view.findViewById<Button>(R.id.button3).setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_launcher_title_to_blankFragment))
+        view.findViewById<Button>(R.id.boton_activity_salta).setOnClickListener{
+            val main = activity as MainActivity
+            main.navHost.navController.navigate(R.id.action_launcher_title_to_screen_about)
+        }
     }
 
 }
