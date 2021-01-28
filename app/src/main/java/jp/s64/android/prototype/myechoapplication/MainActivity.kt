@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 
@@ -41,6 +44,25 @@ class MainActivity : AppCompatActivity(), BlankFragment.OnFragmentInteractionLis
     override fun onSupportNavigateUp(): Boolean {
         return navHost.navController.navigateUp() || super.onSupportNavigateUp()
         //return NavigationUI.navigateUp(drawer, navHost.navController) || super.onSupportNavigateUp()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_bottom_navigation, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        when (item.itemId) {
+
+            R.id.screen_about -> {
+                navHost.navController.navigate(R.id.action_launcher_title_to_screen_about)
+                return true
+            }
+
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 
 }

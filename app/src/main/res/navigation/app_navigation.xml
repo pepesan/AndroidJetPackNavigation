@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_launcher_title_to_blankFragment"
             app:destination="@id/blankFragment" />
+        <action
+            android:id="@+id/action_launcher_title_to_screen_about"
+            app:destination="@id/screen_about" />
     </fragment>
 
     <fragment
